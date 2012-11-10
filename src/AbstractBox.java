@@ -10,12 +10,12 @@ public abstract class AbstractBox implements Pict {
 	private char border;
 	private double height;
 	private double width;
-		
-	protected AbstractBox (double hoehe, double breite, char border, char symbol) {
-			this.height = hoehe;
-			this.width = breite;
-			this.border = border;
-			this.symbol = symbol;
+
+	protected AbstractBox (double height, double width, char border, char symbol) {
+		this.height = height;
+		this.width = width;
+		this.border = border;
+		this.symbol = symbol;
 	}
 
 	protected double getHeight() {
@@ -23,8 +23,8 @@ public abstract class AbstractBox implements Pict {
 	}
 
 
-	protected void setHeight(double hoehe) {
-		this.height = hoehe;
+	protected void setHeight(double height) {
+		this.height = height;
 	}
 
 
@@ -52,11 +52,27 @@ public abstract class AbstractBox implements Pict {
 	protected void setBorder(char border) {
 		this.border = border;
 	}
-	
+
 	@Override
 	public String toString() {
-		// TODO tostring here, for dark/clear-box
-		return null;
+		// TODO toString here, for dark/clear-box
+		String temp = "";
+		for(int i = 0; i <= height; i++) {
+			if (i != 0 || i != height) {
+				for(int j = 0; j <= width; j++) {
+					if (j==0 || j==width) {
+						temp += border;
+					} else {
+						temp += symbol;
+					}
+				}
+			} else {
+				for(int j = 0; j <= width; j++) {
+					temp += border;
+				}
+			}
+		}
+		return temp;
 	}
 
 	@Override
