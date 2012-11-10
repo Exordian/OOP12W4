@@ -7,9 +7,9 @@
  */
 public class Box extends AbstractBox {
 
-	public Box (double hoehe, double breite, char rand, char inhalt) {
-			super(hoehe, breite, rand, inhalt);
-			if(rand == ' ')
+	public Box (double height, double width, char border, char symbol) {
+			super(height, width, border, symbol);
+			if(border == ' ')
 				throw new IllegalArgumentException("leerzeichen als randzeichen");
 	}
 	

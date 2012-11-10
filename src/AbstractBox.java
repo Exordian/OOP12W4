@@ -1,50 +1,56 @@
 
+/**
+ * 
+ * @author Englisch (e1125164), Lenz (e1126963), Schuster (e1025700) 
+ * @since November 2012
+ * 
+ */
 public abstract class AbstractBox implements Pict {
-	private char inhalt;
-	private char rand;
-	private double hoehe;
-	private double breite;
+	private char symbol;
+	private char border;
+	private double height;
+	private double width;
 		
-	protected AbstractBox (double hoehe, double breite, char rand, char inhalt) {
-			this.hoehe = hoehe;
-			this.breite = breite;
-			this.rand = rand;
-			this.inhalt = inhalt;
+	protected AbstractBox (double hoehe, double breite, char border, char symbol) {
+			this.height = hoehe;
+			this.width = breite;
+			this.border = border;
+			this.symbol = symbol;
 	}
 
-	protected double getHoehe() {
-		return hoehe;
-	}
-
-
-	protected void setHoehe(double hoehe) {
-		this.hoehe = hoehe;
+	protected double getHeight() {
+		return height;
 	}
 
 
-	protected double getBreite() {
-		return breite;
+	protected void setHeight(double hoehe) {
+		this.height = hoehe;
 	}
 
 
-	protected void setBreite(double breite) {
-		this.breite = breite;
+	protected double getWidth() {
+		return width;
 	}
 
-	protected char getInhalt() {
-		return inhalt;
+
+	protected void setWidth(double width) {
+		this.width = width;
 	}
 
-	protected void setInhalt(char inhalt) {
-		this.inhalt = inhalt;
+	protected char getSymbol() {
+		return symbol;
 	}
 
-	protected char getRand() {
-		return rand;
+	protected void setSymbol(char symbol) {
+		this.symbol = symbol;
 	}
 
-	protected void setRand(char rand) {
-		this.rand = rand;
+	protected char getBorder() {
+		return border;
+	}
+
+	protected void setBorder(char border) {
+		this.border = border;
 	}
 	
 	@Override
@@ -57,7 +63,7 @@ public abstract class AbstractBox implements Pict {
 	public void scale(double factor) {
 		if(factor < 0.1 || factor > 10.0)
 			return;
-		setHoehe(getHoehe()*factor);
-		setBreite(getBreite()*factor);
+		setHeight(getHeight()*factor);
+		setWidth(getWidth()*factor);
 	}
 }

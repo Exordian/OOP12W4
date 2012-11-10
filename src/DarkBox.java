@@ -7,13 +7,13 @@
  */
 public class DarkBox extends AbstractBox {
 
-	public DarkBox (int hoehe, int breite, char zeichen) {
-			super(hoehe, breite, zeichen, zeichen);
+	public DarkBox (int height, int width, char symbol) {
+			super(height, width, symbol, symbol);
 	}
 		
-	public void aendereZeichen(char zeichen) {
-		setInhalt(zeichen);
-		setRand(zeichen);
+	public void changeSymbol(char symbol) {
+		setSymbol(symbol);
+		setBorder(symbol);
 	}
 	
 }

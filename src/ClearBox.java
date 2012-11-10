@@ -7,11 +7,11 @@
  */
 public class ClearBox extends Box {
 
-	public ClearBox(int hoehe, int breite) {
-		super(hoehe, breite, '*', ' ');
+	public ClearBox(int height, int width) {
+		super(height, width, '*', ' ');
 	}
 
-	public double seitenVerhaeltnis(){
-		return getBreite()/getHoehe();
+	public double getRatio(){
+		return getWidth()/getHeight();
 	}
 }
