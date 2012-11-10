@@ -5,6 +5,13 @@
  * @since November 2012
  * 
  */
-public class ClearBox {
+public class ClearBox extends Box {
 
+	public ClearBox(int hoehe, int breite) {
+		super(hoehe, breite, '*', ' ');
+	}
+
+	public double seitenVerhaeltnis(){
+		return getBreite()/getHoehe();
+	}
 }

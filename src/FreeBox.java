@@ -5,6 +5,18 @@
  * @since November 2012
  * 
  */
-public class FreeBox {
+public class FreeBox extends Repeated<Character> {
+
+	public FreeBox(String inhalt) {
+		super(new Character[1][1]); // dafuq
+		//Character[][] c = new Character(' ')[1][1];
+		//this(c);
+	}
+	
+	@Override
+	public String toString() {
+		//TODO
+		return null;
+	}
 
 }
