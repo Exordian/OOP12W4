@@ -32,7 +32,8 @@ public class Test {
 		
 		// trolo
 		
-		
+		System.out.println(new ClearBox(5,5) + "\n");
+		System.out.println(new Box(6,8 ,'x', 'o'));
 
 	}
 

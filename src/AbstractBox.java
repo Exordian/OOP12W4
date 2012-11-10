@@ -55,22 +55,22 @@ public abstract class AbstractBox implements Pict {
 
 	@Override
 	public String toString() {
-		// TODO toString here, for dark/clear-box
 		String temp = "";
-		for(int i = 0; i <= height; i++) {
-			if (i != 0 || i != height) {
-				for(int j = 0; j <= width; j++) {
-					if (j==0 || j==width) {
+		for(int i = 0; i < getHeight(); i++) {
+			if (i == 0 || i == getHeight()-1) {
+				for(int j = 0; j < getWidth(); j++) {
+					temp += border;
+				}
+			} else {
+				for(int j = 0; j < getWidth(); j++) {
+					if (j==0 || j==getWidth()-1) {
 						temp += border;
 					} else {
 						temp += symbol;
 					}
 				}
-			} else {
-				for(int j = 0; j <= width; j++) {
-					temp += border;
-				}
 			}
+			temp += "\n";
 		}
 		return temp;
 	}
