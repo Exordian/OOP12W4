@@ -34,6 +34,9 @@ public class Test {
 		
 		System.out.println(new ClearBox(5,5) + "\n");
 		System.out.println(new Box(6,8 ,'x', 'o'));
+		
+		Repeated<Integer> r = new Repeated<Integer>(new int[][]{{1,2,3,4},{1,2,3,4}});		
+		System.out.println(r);
 
 	}
 
