@@ -66,7 +66,7 @@ public class Repeated<P> implements Pict {
 					} else if (i >= initialH && j < initialW) {
 						temp += temp.charAt(((i*w)+j)-(initialH*w));
 					} else if (i >= initialH && j >= initialW) {
-						temp += temp.charAt(((i*w)+j)-(initialH*w)-initialW);//(i-initialH)+(j-initialW)
+						temp += temp.charAt(((i*w)+j)-(initialH*w)-initialW);
 					}
 				}
 			}
