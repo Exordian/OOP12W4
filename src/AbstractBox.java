@@ -22,7 +22,6 @@ public abstract class AbstractBox implements Pict {
 		return height;
 	}
 
-
 	protected void setHeight(double height) {
 		this.height = height;
 	}

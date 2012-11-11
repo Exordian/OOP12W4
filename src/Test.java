@@ -1,4 +1,5 @@
 
+
 /**
  * 
  * @author Englisch (e1125164), Lenz (e1126963), Schuster (e1025700) 
@@ -12,9 +13,9 @@ public class Test {
 	 */
 	public static void main(String[] args) {
 		// Vorlaeufiges Klassendiagramm:
-		//                     Pict
-		//                       |
-		//    Repeated<P>---AbstractBox---Scaled<P>
+		//          ____________Pict
+		//         /              |
+		//    Repeated<P>  AbstractBox---Scaled<P>
 		//        |            /   \
 		//    FreeBox?      Box   DarkBox
 		//                   |
@@ -34,8 +35,10 @@ public class Test {
 		
 		System.out.println(new ClearBox(5,5) + "\n");
 		System.out.println(new Box(6,8 ,'x', 'o'));
-		
-		Repeated<Integer> r = new Repeated<Integer>(new int[][]{{1,2,3,4},{1,2,3,4}});		
+		Integer[][] a = new Integer[][]{{1,2,3},{4,5,6,8},{7,8,9,2}};
+		Repeated<Integer> r = new Repeated<Integer>(a);
+		System.out.println(r);
+		r.scale(1.5);
 		System.out.println(r);
 
 	}
