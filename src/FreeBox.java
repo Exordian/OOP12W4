@@ -10,10 +10,10 @@ import java.util.ArrayList;
 public class FreeBox extends Repeated<Character> {
 
 	public FreeBox(String content) {
-		super(first(content));
+		super(format(content));
 	}
 
-	private static Character[][] first(String content) {
+	private static Character[][] format(String content) {
 		ArrayList<String> temp = new ArrayList<String>();
 		int maxlength = 0;
 
