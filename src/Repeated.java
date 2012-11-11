@@ -19,6 +19,8 @@ public class Repeated<P> implements Pict {
 			}
 		}
 
+		// this cast is always valid
+		@SuppressWarnings("unchecked")
 		P[][] temp = (P[][])new Object[p.length][maxlength];
 		for (int i = 0; i < p.length; i++) {
 			for (int j = 0; j < maxlength; j++) {
