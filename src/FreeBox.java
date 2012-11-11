@@ -13,12 +13,6 @@ public class FreeBox extends Repeated<Character> {
 		super(first(content));
 	}
 
-	@Override
-	public String toString() {
-		//TODO
-		return null;
-	}
-
 	private static Character[][] first(String content) {
 		ArrayList<String> temp = new ArrayList<String>();
 		int maxlength = 0;
@@ -30,15 +24,11 @@ public class FreeBox extends Repeated<Character> {
 			}
 		}
 		Character[][]pic = new Character[temp.size()][maxlength];
-		
+
 		int counter = 0;
 		for (String line : temp) {
 			for (int i = 0; i < maxlength; i++) {
-				if (pic[counter][i] != null) {
-					pic[counter][i] = line.charAt(i);
-				} else {
-					pic[counter][i] = null;
-				}
+				pic[counter][i] = line.charAt(i);
 			}
 			counter++;
 		}
