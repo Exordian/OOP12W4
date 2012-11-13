@@ -1,15 +1,15 @@
-
 /**
- * 
- * @author Englisch (e1125164), Lenz (e1126963), Schuster (e1025700) 
+ *
+ * @author Englisch (e1125164), Lenz (e1126963), Schuster (e1025700)
  * @since November 2012
- * 
+ *
  */
 public class Repeated<P> implements Pict {
 	protected P[][] p;
 	private double scale;
 
 	public Repeated(P[][] p) {
+		//p != null;
 		this.p = p;
 
 		int maxlength = 0;
@@ -38,16 +38,17 @@ public class Repeated<P> implements Pict {
 
 	@Override
 	public String toString() {
-		String temp = "";		
+		String temp = "";	
 
 		if (scale <= 1.0) {
 			temp += draw(p.length, p[0].length, p.length, p[0].length);
 		} else {
-			double x =  Math.ceil(scale * p[0].length);
-			double y =  Math.ceil(scale * p.length);
+			double x = Math.ceil(scale * p[0].length);
+			double y = Math.ceil(scale * p.length);
 			temp += draw((int)y, (int)x, p.length, p[0].length);
 		}
 		return temp;
+		//returns output string
 	}
 
 	private String draw(int h, int w, int initialH, int initialW) {
@@ -71,20 +72,22 @@ public class Repeated<P> implements Pict {
 				}
 			}
 		}
-		
+
 		int counter = 1;
 		while (counter < h) {
 			temp = temp.substring(0, w*counter+counter-1) + "\n" + temp.substring(w*counter+counter-1);
 			counter++;
 		}
 		return temp;
+		//the (rezized) picture was drawn as String
 	}
 
-	@Override
 	public void scale(double factor) {
+		// 0.1 <= factor <= 10.0;
 		if(factor < 0.1 || factor > 10.0)
 			return;
 		this.scale = factor;
+		//scale factor has been set
 	}
 
 }

@@ -1,9 +1,8 @@
-
 /**
- * 
- * @author Englisch (e1125164), Lenz (e1126963), Schuster (e1025700) 
+ *
+ * @author Englisch (e1125164), Lenz (e1126963), Schuster (e1025700)
  * @since November 2012
- * 
+ *
  */
 public abstract class AbstractBox implements Pict {
 	private char symbol;
@@ -12,6 +11,8 @@ public abstract class AbstractBox implements Pict {
 	private double width;
 
 	protected AbstractBox (double height, double width, char border, char symbol) {
+		//height, width, border and symbol != null;
+		//height, width > 0;
 		this.height = height;
 		this.width = width;
 		this.border = border;
@@ -20,26 +21,36 @@ public abstract class AbstractBox implements Pict {
 
 	protected double getHeight() {
 		return height;
+		//returns height
 	}
 
 	protected void setHeight(double height) {
+		//height > 0;
 		this.height = height;
+		//height has been set
 	}
 
 	protected double getWidth() {
 		return width;
+		//return width
 	}
 
 	protected void setWidth(double width) {
+		//width > 0;
 		this.width = width;
+		//width has been set
 	}
 
 	protected void setSymbol(char symbol) {
+		//symbol is valid
 		this.symbol = symbol;
+		//symbol has been set
 	}
 
 	protected void setBorder(char border) {
+		//border symbol is valid
 		this.border = border;
+		//border has been set
 	}
 
 	@Override
@@ -62,13 +73,15 @@ public abstract class AbstractBox implements Pict {
 			temp += "\n";
 		}
 		return temp;
+		//returns output string
 	}
 
-	@Override
 	public void scale(double factor) {
+		// 0.1 <= factor <= 10.0;
 		if(factor < 0.1 || factor > 10.0)
 			return;
 		setHeight(getHeight()*factor);
 		setWidth(getWidth()*factor);
+		//picture has been resized
 	}
 }

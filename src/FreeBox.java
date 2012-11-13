@@ -2,14 +2,15 @@ import java.util.ArrayList;
 
 
 /**
- * 
- * @author Englisch (e1125164), Lenz (e1126963), Schuster (e1025700) 
+ *
+ * @author Englisch (e1125164), Lenz (e1126963), Schuster (e1025700)
  * @since November 2012
- * 
+ *
  */
 public class FreeBox extends Repeated<Character> {
 
 	public FreeBox(String content) {
+		//content != null;
 		super(format(content));
 	}
 
@@ -33,8 +34,8 @@ public class FreeBox extends Repeated<Character> {
 			counter++;
 		}
 		return pic;
+		//returns 2dimensional character array of input string
 	}
 
 }
-
 
