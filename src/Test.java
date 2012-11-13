@@ -26,7 +26,7 @@ public class Test {
 		Box box = new Box(6,8,'x','o');
 		System.out.println("Box:\n"+ box);
 		
-		box.scale(2.9); 	//scale by factor 2.9
+		box.scale(2.5); 	//scale by factor 2.5
 		System.out.println(box +"\n");
 			
 		//DarkBox
@@ -40,9 +40,13 @@ public class Test {
 		System.out.println(darkbox);
 			
 		//Repeated
-		Integer[][] a = new Integer[][]{{1,2,3,4},{5,6,7,8}};
-		Repeated<Integer> r = new Repeated<Integer>(a);
-		System.out.println("Repeated:\n"+ r +"\n");
+		Integer[][] i = new Integer[][]{{1,2,3,4},{5,6,7,8}};
+		Repeated<Integer> g = new Repeated<Integer>(i);
+		System.out.println("Repeated:\n"+ g +"\n");
+		
+		Character[][] a = new Character[][]{{'a','b','c','d'},{'e','f','g','h'}};
+		Repeated<Character> r = new Repeated<Character>(a);
+		System.out.println(r +"\n");
 
 		r.scale(1.5);		//scale by factor 1.5
 		System.out.println(r +"\n");
@@ -68,7 +72,7 @@ public class Test {
 		System.out.println("Scaled:\n");
 		for(Pict p : pictures)
 			System.out.println(p +"\n");
-		s.scale(1.9);		//scale by factor 1.9
+		s.scale(2);		//scale by factor 2
 		for(Pict p : pictures)
 			System.out.println(p +"\n");
 	}
